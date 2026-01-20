@@ -23,14 +23,14 @@
 ## 📊 Analysis
 ### Performance Comparison
 
-## Visualizations
+## 📝 Visualizations
 
 ## 🤔 Challenges & Solutions
-### Challenge 1:[Description]
+### Challenge 1: [Description]
 - Solution:
 - Learnings:
 
-## 📝 Further Exploration
+## 📖 Further Exploration
 - Read [paper/book]
 - Implement [variations]
 - Compared with [alternative approach]
