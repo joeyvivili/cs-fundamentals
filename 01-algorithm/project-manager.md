@@ -1,6 +1,16 @@
 Programming Project Setup
+
+# 🧠 New Python Project Setup (Mac / VS Code)
+
 ## 1️⃣ Create a project folder
+
+**Why**
+
 * Keeps code, dependencies, and virtual environment organized
+* Prevents files from being scattered across your computer
+
+**How**
+
 ```bash
 mkdir my_project
 cd my_project
@@ -9,6 +19,9 @@ cd my_project
 ---
 
 ## 2️⃣ Create a virtual environment (ONE per project)
+
+**Why**
+
 * Isolates packages per project
 * Prevents version conflicts (e.g., one project needs `openai==1.x`, another needs a different version)
 * Avoids breaking other projects or system Python
@@ -16,6 +29,8 @@ cd my_project
 **Rule**
 
 > **One project = one virtual environment**
+
+**How**
 
 ```bash
 python -m venv .venv
