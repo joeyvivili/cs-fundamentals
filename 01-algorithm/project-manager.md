@@ -1,6 +1,7 @@
 Programming Project Setup
 ## 1️⃣ Create a project folder
 * Keeps code, dependencies, and virtual environment organized
+
 **Code**
 
 ```bash
