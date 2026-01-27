@@ -1,7 +1,4 @@
 Programming Project Setup
-
-# 🧠 New Python Project Setup (Mac / VS Code)
-
 ## 1️⃣ Create a project folder
 
 **Why**
@@ -168,7 +165,7 @@ my_project/
 
 * **pyenv** → Python *version*
 * **venv** → Python *packages per project*
-* **pip installs into the currently active Python**
+* **pip installs packages into the currently active Python**
 
 ---
 
@@ -178,12 +175,4 @@ my_project/
 * Reusing one virtual environment for multiple projects
 * Letting VS Code use system Python
 
----
 
-If you want, I can:
-
-* Turn this into a **1-page PDF note**
-* Add **auto-activation** of `.venv`
-* Add a **requirements.txt workflow**
-
-Just tell me 👍
