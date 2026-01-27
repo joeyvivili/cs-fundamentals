@@ -1,9 +1,6 @@
 Programming Project Setup
 ## 1️⃣ Create a project folder
 * Keeps code, dependencies, and virtual environment organized
-
-**Code**
-
 ```bash
 mkdir my_project
 cd my_project
@@ -19,8 +16,6 @@ cd my_project
 **Rule**
 
 > **One project = one virtual environment**
-
-**Code**
 
 ```bash
 python -m venv .venv
