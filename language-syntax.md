@@ -254,6 +254,17 @@ def add(a, b):
 * No return type declaration
 * Indentation defines scope
 * `return` is optional
+* define functions before it is run
+```python
+def greet():
+    print("Hello")
+
+def main():
+    greet()
+
+if __name__ == "__main__":
+    main()
+```
 
 ---
 
@@ -280,7 +291,18 @@ int add(int a, int b)
 
 * Return type is required
 * Semicolons required
-* Function must be declared before use
+* **Function must be declared before use** (declare **prototype** before main(), define the actual function after below main())
+```c
+void greet();  // prototype
+
+int main() {
+    greet();
+}
+
+void greet() {
+    printf("Hello");
+}
+```
 
 ---
 
