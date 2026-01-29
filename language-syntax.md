@@ -216,8 +216,8 @@ Here’s a **general, language-agnostic function declaration note**, clean and r
 A **function** is a reusable block of code that:
 
 * Performs a specific task
-* May accept inputs (**parameters**)
-* May return an output (**return value**)
+* May accept inputs (**parameters**) (if not, function_name(**void**))
+* May return an output (**return value**) (if not, **void** function_name())
 
 ---
 
