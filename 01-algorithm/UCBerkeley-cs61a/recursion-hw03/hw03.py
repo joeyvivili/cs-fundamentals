@@ -165,7 +165,7 @@ def count_coins(total):
     return f(total, 25)
 
 
-
+### Tower of Hanoi game
 def print_move(origin, destination):
     """Print instructions to move a disk."""
     print("Move the top disk from rod", origin, "to rod", destination)
