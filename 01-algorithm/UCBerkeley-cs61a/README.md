@@ -1,5 +1,12 @@
 ## Recursion
 ---
+## Data Abstraction
+---
+## Mutability
+- Linked List vs. List
+
+
+---
 ## Reading material for this course: 
 - https://www.composingprograms.com/
 ---
