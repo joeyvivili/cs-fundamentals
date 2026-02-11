@@ -1,5 +1,14 @@
 ## Recursion
 ---
+## Class   
+- Attributes
+- Methods
+    
+🔹 Object Oriented Programming  
+
+🔹 Inheritence
+
+---
 ## Data Abstraction
 ---
 ## Mutability
