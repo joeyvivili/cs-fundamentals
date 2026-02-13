@@ -4,9 +4,16 @@
 - Attributes
 - Methods
     
-🔹 Object Oriented Programming  
+🔹 Object Oriented Programming (OOP)   
+-  Abstraction barriers enforce the **boundaries** between different aspects of a large program.
+-  Object-oriented programming is particularly well-suited to programs that model systems that have separate but interacting parts. 
+
 
 🔹 Inheritence
+- Base class (parent class) & Subclass (child class)
+    - A subclass inherits the attributes of its base class, but may **override** certain attributes, including certain methods.
+    - With inheritance, we only specify what is **different** between the subclass and the base class. Anything that we leave unspecified in the subclass is automatically assumed to behave just as it would for the base class.
+    - Python supports the concept of a subclass inheriting attributes from multiple base classes -- multiple inheritance.
 
 ---
 ## Data Abstraction
@@ -28,6 +35,9 @@ Key:
 - Assignment rebinds names.
 - Mutation changes objects.
 
+---
+## Iterator & Generator
+- Stream
 ---
 ## Reading material for this course: 
 - https://www.composingprograms.com/
