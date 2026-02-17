@@ -6,7 +6,8 @@
     
 🔹 Object Oriented Programming (OOP)   
 -  Abstraction barriers enforce the **boundaries** between different aspects of a large program.
--  Object-oriented programming is particularly well-suited to programs that model systems that have separate but interacting parts. 
+-  Object-oriented programming is particularly well-suited to programs that model systems that have separate but interacting parts.
+-  Discussion_07 -- elegant code design
 
 
 🔹 Inheritence
