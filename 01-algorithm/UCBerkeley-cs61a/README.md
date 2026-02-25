@@ -16,6 +16,11 @@
     - With inheritance, we only specify what is **different** between the subclass and the base class. Anything that we leave unspecified in the subclass is automatically assumed to behave just as it would for the base class.
     - Python supports the concept of a subclass inheriting attributes from multiple base classes -- multiple inheritance.
 
+
+ 🔹 Modular Design
+ - large programs can benefit from modular design, which means that the whole program is broken up into small, fairly (not completely since they have to interact) independent parts that are isolated by data abstraction barriers
+ - principle: isolate different parts of a program that address different concerns
+
 ---
 ## Data Abstraction
 ---
@@ -30,12 +35,30 @@ List (mutable) vs. Tuple (immutable)
     - 🔹 pass-by-refernce
         - A reference (pointer) to the original object is passed
         - Mutations affect the original
+```python     
+>>> ones = Link(1)
+>>> ones.rest = ones
+>>> [ones.first, ones.rest.first, ones.rest.rest.first, ones.rest.rest.rest.first]
+[1, 1, 1, 1]
+>>> ones.rest is ones
+True
+```
       
 Key:  
 - Names point to objects.
 - Assignment rebinds names.
-- Mutation changes objects.
+- Mutation changes objects.  
 
+
+ 🔹 Functional Recursion vs. Mutating Recursion
+- Functional recursion:
+    - Think in terms of values
+    - Always return something
+    - Never modify self
+- Mutating recursion:
+    - Think in terms of pointers
+    - Modify attributes
+    - Often return None
 ---
 ## Iterator & Generator
 - Stream
