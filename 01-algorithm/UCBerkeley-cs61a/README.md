@@ -2,7 +2,11 @@
 ---
 ## Class   
 - Attributes
+    - class attribute
+    - instance attribute 
 - Methods
+    - methods are also instance attributes
+    - methods vs. functions 
     
 🔹 Object Oriented Programming (OOP)   
 -  Abstraction barriers enforce the **boundaries** between different aspects of a large program.
