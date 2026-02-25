@@ -18,8 +18,8 @@
 
 
  🔹 Modular Design
- - large programs can benefit from modular design, which means that the whole program is broken up into small, fairly (not completely since they have to interact) independent parts that are isolated by data abstraction barriers
- - principle: isolate different parts of a program that address different concerns
+ - Large programs can benefit from modular design, which means that the whole program is broken up into small, fairly (not completely since they have to interact) independent parts that are isolated by data abstraction barriers
+ - Principle: isolate different parts of a program that address different concerns
 
 ---
 ## Data Abstraction
