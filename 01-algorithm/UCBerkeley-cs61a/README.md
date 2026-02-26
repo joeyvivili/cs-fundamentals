@@ -72,9 +72,15 @@ Key:
 ## Iterator & Generator
 - Stream
 ---
-## Reading material for this course: 
+## Textbook for this course: 
 - https://www.composingprograms.com/
 ---
 ## Additional Reading Material: 
 - Python syntax and data structure: *"Dive Into Python3"* http://getpython3.com/diveintopython3/index.html
+- *"Structure and Interpretation of Computer Programs"*
 ---
+## Website tools:
+- Python environment vitualizer: Python Tutor  
+https://pythontutor.com/visualize.html#mode=display
+- Scheme environment vitualizer & interpreter:  
+https://pythontutor.com/visualize.html#mode=display
