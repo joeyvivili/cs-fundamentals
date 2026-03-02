@@ -1,3 +1,10 @@
+"""This is a self-directed Scheme calculator interpreter project that simulates a Scheme interpreter
+which takes in user input expression and compute the result using AST; the interpreter will raise
+exception when there is an invalid expression.
+This is a basic calculator interpreter that only allows +, -, *, / calculation.
+This project aims at assisting me in understanding the structure of an interpreter.
+"""
+
 import operator
 ############################
 # EXCEPTION
@@ -218,21 +225,17 @@ def evaluate(expr):
 ############################
 # REPL
 ###########################
-# def repl():
-#     while True:
-#         try:
-#             user_input = input("scheme> ")
-#             print("You typed:", user_input)
-#             """
-#             expr = input("scheme> ")
-#             tokens = tokenize(expr)
-#             tree = parse(tokens)
-#             result = evaluate(tree)
-#             print(result)
-#             """
-#         except (EOFError, KeyboardInterrupt):
-#             print("\nExiting Scheme Calculator interpreter.")
-#             break
+def repl():
+    while True:
+        try:
+            expr = input("scheme> ")
+            tokens = tokenize(expr)
+            tree = parse(tokens)
+            result = evaluate(tree)
+            print(result)
+        except (EOFError, KeyboardInterrupt):
+            print("\nExiting Scheme Calculator interpreter.")
+            break
 
-# if __name__ == "__main__":
-#     repl()
+if __name__ == "__main__":
+    repl()
