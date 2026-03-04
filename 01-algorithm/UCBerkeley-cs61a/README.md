@@ -72,6 +72,72 @@ Key:
 ## Iterator & Generator
 - Stream
 ---
+## Interpreter Design
+🔹 Functions
+- tokenizer()
+    - raw string -> tokens
+```python
+>>> s = "(+ 2 3)"
+>>> tokenize(s)
+['(', '+', '2', '3', ')']
+```
+- parser()
+    - tokens -> nested Pair structure / Tree structure
+    - Converting parentheses into a linked-tree structure
+        - Parentheses define nesting
+        - Each '(' creates a new recursive level.
+```python
+>>> s = "(* 2 (+ 3 4))"
+>>> tokenize(s)
+['(', '*', '2', '(', '+', '3', '4', ')', ')']
+>>> parse(tokenize(s))
+Pair('*', Pair(2, Pair(Pair('+', Pair(3, Pair(4, nil))), nil)))
+```
+- evaluate()
+- apply()
+
+🔹 Objects / Classes
+- Pair / Linked List
+    -  attributes
+- Frame
+    - keeps track of the bindngs
+    - attributes
+        - bindings = {}, a dictionary containing bindings[symbol] = value elements
+        - parent = None or another Frame object
+    - methods
+        - define(symbol, value): add (symbol, value) pair to current Frame's bindings
+        - lookup(symbol): return the value bound to symbol or parent(s)
+
+🔹 Built-in Functions
+
+🔹 Special Forms  
+    - if
+    - define
+    - quote
+    - begin
+    - lambda
+        - user defined functions 
+    - and
+    - or
+    - cond
+    - let
+``` python
+SPECIAL_FORMS = {
+    'and': do_and_form,
+    'begin': do_begin_form,
+    'cond': do_cond_form,
+    'define': do_define_form,
+    'if': do_if_form,
+    'lambda': do_lambda_form,
+    'let': do_let_form,
+    'or': do_or_form,
+    'quote': do_quote_form,
+    'quasiquote': do_quasiquote_form,
+    'unquote': do_unquote,
+    'mu': do_mu_form,
+}
+```
+---
 ## Textbook for this course: 
 - https://www.composingprograms.com/
 ---
