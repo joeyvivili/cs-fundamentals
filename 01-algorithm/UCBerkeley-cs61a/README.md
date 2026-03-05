@@ -93,8 +93,97 @@ Key:
 >>> parse(tokenize(s))
 Pair('*', Pair(2, Pair(Pair('+', Pair(3, Pair(4, nil))), nil)))
 ```
+Evaluation
 - evaluate()
+```
+scheme_eval(expr):
+
+atom?
+   return value
+
+symbol?
+   lookup
+
+list?
+   special form?
+        handle specially
+   otherwise:
+        eval operator
+        eval operands
+        apply
+```
+```python
+def scheme_eval(expr, env):
+
+    # 1. Self-evaluating expressions
+    if scheme_self_evaluating(expr):
+        return expr
+
+    # 2. Symbols (variable lookup)
+    if scheme_symbolp(expr):
+        return env.lookup(expr)
+
+    # 3. Lists (procedure calls or special forms)
+    if not scheme_listp(expr):
+        raise SchemeError("malformed list")
+
+    first = expr.first
+    rest = expr.rest
+
+    # 4. Special forms
+    if scheme_symbolp(first) and first in SPECIAL_FORMS:
+        return SPECIAL_FORMS[first](rest, env)
+
+    # 5. Procedure call
+    operator = scheme_eval(first, env)
+    operands = rest.map(lambda x: scheme_eval(x, env))
+
+    return scheme_apply(operator, operands, env)
+```
 - apply()
+    - 1️⃣ PrimitiveProcedure
+    - 2️⃣ LambdaProcedure (user-defined functions)
+    - 3️⃣ MuProcedure (later in project)
+    - define 3 corresponding classes to handle 3 different kinds of procedures
+```python
+def scheme_apply(procedure, args, env):
+
+    if isinstance(procedure, PrimitiveProcedure):
+        ...
+
+    elif isinstance(procedure, LambdaProcedure):
+        ...
+
+    elif isinstance(procedure, MuProcedure):
+        ...
+```
+- mutual recursive call between evaluate(exprssion, current environment) && apply(procedure being called, arguments, env)
+```
+scheme_eval
+     |
+     v
+evaluate operator & operands
+     |
+     v
+scheme_apply
+     |
+     v
+evaluate procedure body
+     |
+     v
+scheme_eval again
+
+example
+>>> (+ (* 2 3) 4)
+scheme_eval (+ (* 2 3) 4)
+    |
+    +-- scheme_eval (* 2 3)
+    |        |
+    |        +-- scheme_apply (*, (2 3))
+    |
+    +-- scheme_apply (+, (6 4))
+```
+- question: there are two evaluation functions -- scheme_eval() and eval_all(), why do we need these two functions? what is the difference between them? Since scheme_eval() is a recursive call, wouldn't eval_all() just be redundant?
 
 🔹 Objects / Classes
 - Pair / Linked List
