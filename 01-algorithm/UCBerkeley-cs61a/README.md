@@ -72,7 +72,20 @@ Key:
 ## Iterator & Generator
 - Stream
 ---
-## Interpreter Design
+## Interpreter Design 
+🔹 Overall Structure
+## REPL
+```
+(textbook chapter 3 && lab 10)
+Read
+     |
+     v
+Evaluate
+     |
+     v
+Print
+Loop
+```
 🔹 Functions
 - tokenizer()
     - raw string -> tokens
