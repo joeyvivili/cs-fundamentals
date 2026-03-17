@@ -3,6 +3,36 @@
 ## Recursion
 
 🔹 Tree
+```python
+# defining tree structure using Data Abstraction
+def tree(label, branches=[]):
+    return [label] + list(branches)
+
+def label(t):
+    return t[0]
+
+def branches(t):
+    return t[1:]
+
+def is_leaf(t):
+    return not branches(t)
+
+# defining tree structrue using Class (object-oriented programming)
+class Tree:
+    def __init__(self, label, branches=[]):
+        self.label = label
+        self.branches = list(branches)
+
+    def is_leaf(self):
+        return not self.branches
+
+    def __repr__(self):
+        if self.branches:
+            return f"Tree({self.label}, {self.branches})"
+        else:
+            return f"Tree({self.label})"
+
+```
 
 ---
 ## Class   
@@ -268,9 +298,13 @@ clauses
 ## Additional Reading Material: 
 - Python syntax and data structure: *"Dive Into Python3"* http://getpython3.com/diveintopython3/index.html
 - *"Structure and Interpretation of Computer Programs"*
+- *"How to Design Programs"*
+    - focuses on the process of how to correctly design functions  
 ---
 ## Website tools:
 - Python environment vitualizer: Python Tutor  
 https://pythontutor.com/visualize.html#mode=display
 - Scheme environment vitualizer & interpreter:  
 code.cs61a.org
+---
+Course start date: 2026/1/23, finish date: 2026/3/17
