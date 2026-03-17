@@ -247,6 +247,21 @@ SPECIAL_FORMS = {
       3. Format and order the output rows and columns using SELECT and ORDER BY
 clauses
 ---
+## Distributed Computing (Chapter. 4)
+- Large-scale data processing applications often coordinate effort among multiple computers. A distributed computing application is one in which multiple interconnected but independent computers coordinate to perform a joint computation.
+- Message protocol: computers adopt a message protocol that endows meaning to sequences of bytes in order to transfer messages between different computers
+    - Message protocols are not particular programs or software libraries. Instead, they are rules that can be applied by a variety of programs, even written in different programming languages. As a result, computers with vastly different software systems can participate in the same distributed system, simply by conforming to the message protocols that govern the system.
+- Client/Server architecture/system
+    - A drawback of client-server systems is that computing resources become scarce if there are too many clients. Clients increase the demand on the system without contributing any computing resources. 
+- Peer-to-Peer system
+    - a more equal division of labor
+    - The term peer-to-peer is used to describe distributed systems in which labor is divided among all the components of the system. All the computers send and receive data, and they all contribute some processing power and memory. As a distributed system increases in size, its capacity of computational resources increases.
+## Distributed Data Processing
+- Sometimes a data set too large to be processed by a single machine is instead distributed among many machines, each of which process a portion of the dataset.
+- MapReduce && Hadoop
+- Parallel Computing
+    - From the 1970s through the mid-2000s, the speed of individual processor cores grew at an exponential rate. Much of this increase in speed was accomplished by increasing the clock frequency, the rate at which a processor performs basic operations. In the mid-2000s, however, this exponential increase came to an abrupt end, due to power and thermal constraints, and the speed of individual processor cores has increased much more slowly since then. Instead, CPU manufacturers began to place multiple cores in a single processor, enabling more operations to be performed concurrently. 
+---
 ## Textbook for this course: 
 - https://www.composingprograms.com/
 ---
