@@ -240,6 +240,13 @@ SPECIAL_FORMS = {
 }
 ```
 ---
+## SQL
+- A SELECT statement describes an output table based on input rows. To write one:
+    - 1. Describe the input rows using FROM and WHERE clauses.
+      2. Group those rows and determine which groups should appear as output rows using GROUP BY and HAVING clauses.
+      3. Format and order the output rows and columns using SELECT and ORDER BY
+clauses
+---
 ## Textbook for this course: 
 - https://www.composingprograms.com/
 ---
