@@ -73,4 +73,52 @@ void main(){
   - functions can only return one thing, and that one thing must have a specific type   
 - functions also get type checked
 ---
+## Class & Object Oriented Programming
+- static
+    - static functions are class methods/functions instead of instance methods. Static functions are accessed through class_name.static_func_name()
+    - static variables define class variable instead of insstance attributes
+    - static methods must access an instance variable/attribute via a specific instance
+
+---
+#### Pass by value
+- Java ONLY **pass by value**, does NOT **pass by reference**
+- information is stored in memory as a sequence of ones and zeros
+    - e.g. 72 stored as 01001000, the letter H stored as 01001000 (same as the number 72), True stored as 00000001
+- each Java type has a different way to interpret the bits:
+    - 8 primitive types in Java: byte, short, int, long, float, double, boolean, char
+    - everything else, including arrays, is a **reference type**
+- given variables b and a:
+    - b = a **copies** all the bits from a into b  
+```java
+Dog a = new Dog(name=lucky, weight=80);
+Dog b;
+b = a;
+b.weight = 100
+```
+- now if we print(a.weight) we will see that a.weight = 100 too,
+- in Java, **new** returns the address of the newly created object, therefore a is a reference, and when we copy b from a/assign b = a, we are copying the address of the object into b; thus when we change b, the object that a refers to changes too 
+```java
+int a = 100;
+int b = a;
+a = 50;
+```
+- since b = a copies all bits from a to b, when we assign int b = a we copies the bits for the integer 100 into b, then when we change a later, it does not affect b
+```java
+double average(double a, double b){
+    return (a + b)/2;
+}
+
+void main(){
+    double x = 5.5;
+    double y = 10.5;
+    double avg = average(x, y);
+}
+```
+- passing parameters obeys the same rule: simply **copy the bits** to the new scope -- **pass by value**
+    - therefore when we pass in x, y into average(a, b), a copies the value bits of double 5.5 from x and b copies the value bitd of double 10.5 from y 
+---
+## Resources
+- Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
+- Java Visualizer: https://cscircles.cemc.uwaterloo.ca/java_visualize/
+---
 Course start date: 2026/3/17
