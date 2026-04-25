@@ -115,7 +115,13 @@ void main(){
 }
 ```
 - passing parameters obeys the same rule: simply **copy the bits** to the new scope -- **pass by value**
-    - therefore when we pass in x, y into average(a, b), a copies the value bits of double 5.5 from x and b copies the value bitd of double 10.5 from y 
+    - therefore when we pass in x, y into average(a, b), a copies the value bits of double 5.5 from x and b copies the value bitd of double 10.5 from y
+
+Arrays  
+    - arrays are Objects in Java, are initiated using the **new** keyword
+    - therefore when you initiate a new array int[] x = new int[]{1, 2, 3, 4, 5}, x is an object and a stores a memory address
+
+    
 ---
 ## Resources
 - Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
