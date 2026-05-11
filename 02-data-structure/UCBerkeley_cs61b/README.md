@@ -123,6 +123,53 @@ Arrays
 
     
 ---
+#### Public vs. Private
+- Private
+    - use the keyword **private** to prevent code from other classes from using members (or constructors) of a class
+    - to hide implementation details from users
+```java
+public class intNodeList {
+    /* declaring first PRIVATE would prevent outside-the-class access like L.first (where L is an intNodeList) */
+    private intNode first;
+
+    public intNodeList(int f){
+        this.first = new intNode(f, null);
+    }
+
+    public int getFirst(){
+        return this.first.value;
+    }
+}
+```
+nested class
+    - nested classes are useful when it does not stand on its own and is obviously subordinate to another class
+    - if the nested class never use any instance variables or methods of the outside class, declare it **static** (-- static class can not access outside class's instance variable or methods)
+```java
+public class intNodeList {
+    /* nested class */
+    private static class intNode {
+        public int value;
+        public intNode next;
+    
+        public intNode(int v, intNode n){
+            this.value = v;
+            this.next = n;
+        }
+    }
+    
+    private intNode first;
+
+    public intNodeList(int f){
+        this.first = new intNode(f, null);
+    }
+
+    public int getFirst(){
+        return this.first.value;
+    }
+}
+```
+- 
+---
 ## Resources
 - Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
 - Java Visualizer: https://cscircles.cemc.uwaterloo.ca/java_visualize/
