@@ -141,9 +141,10 @@ public class intNodeList {
     }
 }
 ```
-nested class
-    - nested classes are useful when it does not stand on its own and is obviously subordinate to another class
-    - if the nested class never use any instance variables or methods of the outside class, declare it **static** (-- static class can not access outside class's instance variable or methods)
+
+#### Nested Class
+- nested classes are useful when it does not stand on its own and is obviously subordinate to another class
+- if the nested class never use any instance variables or methods of the outside class, declare it **static** (-- static class can not access outside class's instance variable or methods)
 ```java
 public class intNodeList {
     /* nested class */
@@ -168,7 +169,8 @@ public class intNodeList {
     }
 }
 ```
-- 
+
+![Diagram](noteImages/)
 ---
 ## Resources
 - Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
