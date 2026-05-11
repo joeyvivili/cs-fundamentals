@@ -170,7 +170,7 @@ public class intNodeList {
 }
 ```
 
-![Diagram](noteImages/)
+![Diagram](NoteImages/naked-vs-clothed-data-structure.png)
 ---
 ## Resources
 - Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
