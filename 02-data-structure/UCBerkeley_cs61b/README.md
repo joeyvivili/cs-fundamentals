@@ -174,6 +174,7 @@ public class intNodeList {
 - the advantage of having a 【clothed data structure】(ex.naked-intList vs. node-intList) is that whenever you want to see or acess the data, you have to go through the middle man, which
     - provides you easy-to-access methods (addFirst(), getFirst(), etc.) that are guaranteed safe and
     - it serves as a natural place to store meta information (size, first (node), etc.) about the intList
+![Diagram](NoteImages/java-memory.png)
 ---
 ## Resources
 - Textbook: https://github.com/Berkeley-CS61B/sp26-gitbook
